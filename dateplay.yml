@@ -10,3 +10,4 @@
       tags: datecmd
 
     - debug: msg="{{datecmd.stdout}}"
+testname
