@@ -1,0 +1,9 @@
+- name: This is a test play
+  hosts: all
+  tasks: 
+    - name: create an user account
+      user: 
+        name: john
+        state: present
+        shell: /bin/sh
+        comment:  this is a the first user
