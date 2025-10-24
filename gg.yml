@@ -1,1 +1,5 @@
-gg
+-	name: This is first play book
+	hosts: all
+  tasks:
+ 		-	name: Print Jai Mata Di
+   		shell: echo "Jai Mata Di"
