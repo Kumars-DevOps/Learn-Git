@@ -1,5 +1,10 @@
 - name: This is first play book
-	hosts: all
+  hosts: all
   tasks:
-   -name: Print Jai Mata Di
-    shell: echo "Jai Mata Di"
+   - name: Print Jai Mata Di
+     shell: echo "Jai Mata Di"
+     register: mata
+
+   - name: Use debug module to print mata
+     debug:
+      var: mata
