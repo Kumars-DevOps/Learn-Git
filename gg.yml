@@ -8,3 +8,7 @@
    - name: Use debug module to print mata
      debug:
       var: mata
+   - name: create a user
+     user: 
+      name: john
+      stat: present
