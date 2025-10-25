@@ -2,29 +2,29 @@
   hosts: client1
   tasks: 
    - name: Install httpd package
-      dnf:
-       name: httpd
-       state: latest
+     dnf:
+      name: httpd
+      state: latest
    - name: copy home page
-      copy:
-       src: mypage.txt
-       dest: /var/www/html/index.html
+     copy:
+      src: mypage.txt
+      dest: /var/www/html/index.html
    - name: open firewall for hhtpd port
-      firewalld:
-       state: present
-       service: http
-       port: 80/tcp
-       permanent: 1
-       immediate: 1
+     firewalld:
+      state: present
+      service: http
+      port: 80/tcp
+      permanent: 1
+      immediate: 1
    - name: create webadmin user
-      user:
-       name: webadmin
-       state: present
-       comment: "This is web administrator account"
-       shell: /bin/sh
+     user:
+      name: webadmin
+      state: present
+      comment: "This is web administrator account"
+      shell: /bin/sh
    - name: Start httpd service
-      service:
-       name: httpd
-       state: started
-       enabled: true
+     service:
+      name: httpd
+      state: started
+      enabled: true
        
