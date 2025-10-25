@@ -1,6 +1,6 @@
 - name: This playbook is to install httpd Web-Server
   hosts: client1
-  tasks: 
+  tasks:
    - name: Install httpd package
      dnf:
       name: httpd
@@ -27,4 +27,3 @@
       name: httpd
       state: started
       enabled: true
-       
