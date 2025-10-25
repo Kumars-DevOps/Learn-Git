@@ -9,6 +9,6 @@
      shell: df -TPh >> /tmp/diskusage.txt
      register: diskreport
    - name: use debug module to print diskusage
-     dubug: 
+     debug: 
       var: diskreport
       
