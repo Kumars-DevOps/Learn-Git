@@ -1,0 +1,14 @@
+- name: Install an Application
+  hosts: all
+  tasks: 
+   - name: Install dialog Application
+     dnf: 
+      name: dialog
+      state: latest
+   - name: Capture Disk Usage Report
+     shell: df -TPh >> /tmp/diskusage.txt
+     register: diskreport
+   - name: use debug module to print diskusage
+     dubug: 
+      var: diskreport
+      
