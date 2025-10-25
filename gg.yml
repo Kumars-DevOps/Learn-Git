@@ -11,4 +11,9 @@
    - name: create a user
      user: 
       name: john
-      stat: present
+      state: present
+      register: ucr
+   - name: print user id 
+     debug: 
+      msg:
+       - "the user id is {{ucr.uid}}"
