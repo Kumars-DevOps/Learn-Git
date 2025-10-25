@@ -10,5 +10,8 @@
      register: diskreport
    - name: use debug module to print diskusage
      debug: 
-      var: diskreport
+      #var: diskreport
+      msg:
+       - "the start time is {{diskreport.start}}"
+       - "the end time is {{diskreport.end}}"
       
