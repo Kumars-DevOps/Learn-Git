@@ -9,7 +9,7 @@
      copy:
       src: mypage.txt
       dest: /var/www/html/index.html
-   - name: open firewall for hhtpd port
+   #- name: open firewall for hhtpd port
      #firewalld:
       #state: present
       #service: http
