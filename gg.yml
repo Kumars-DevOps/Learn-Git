@@ -12,9 +12,8 @@
      user: 
       name: john
       state: present
-      register: ucr
+     register: ucr
    - name: print user id 
      debug: 
       msg:
        - "the user id is {{ucr.uid}}"
-       
