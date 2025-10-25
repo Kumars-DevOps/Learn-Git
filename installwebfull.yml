@@ -10,12 +10,12 @@
       src: mypage.txt
       dest: /var/www/html/index.html
    - name: open firewall for hhtpd port
-     firewalld:
-      state: present
-      service: http
-      port: 80/tcp
-      permanent: 1
-      immediate: 1
+     #firewalld:
+      #state: present
+      #service: http
+      #port: 80/tcp
+      #permanent: 1
+      #immediate: 1
    - name: create webadmin user
      user:
       name: webadmin
