@@ -7,7 +7,8 @@
       state: latest
    - name: copy home page
      copy:
-      src: mypage.txt
+      #src: mypage.txt
+      content: "Sample Webpage For Httpd Web-Server"
       dest: /var/www/html/index.html
    #- name: open firewall for hhtpd port
      #firewalld:
