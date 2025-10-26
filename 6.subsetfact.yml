@@ -4,10 +4,8 @@
   tasks: 
    - name: use Setup module to gather facts
      setup:
-      gather_subset:  
-      #  - network
-      # - hardware
-        - distribution
+       gather_subset:
+         - architecture
      register: facts
    - name: use debug modul to print facts
      debug: 
