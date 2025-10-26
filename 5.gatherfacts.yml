@@ -1,0 +1,10 @@
+- name: Gather facts from the managed nodes
+  hosts: all
+  tasks: 
+   - name: use Setup module to gather facts
+     setup:
+     register: facts
+   - name: use debug modul to print facts
+     debug: 
+      var: facts
+     
