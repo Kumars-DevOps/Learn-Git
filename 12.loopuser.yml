@@ -5,7 +5,7 @@
       user: 
           name: "{{item.uname}}"
           shell: "{{item.ushell}}"
-          comment: "{{item.comment}}"
+          comment: "{{item.ucomment}}"
       loop: 
         - uname: user1
           ushell: /bin/sh
