@@ -4,7 +4,7 @@
   tasks: 
    - name: use Setup module to gather facts
      setup:
-      gather_subset:  ansible_default_ipv4
+      gather_subset:  all_ipv4_addresses
      register: facts
    - name: use debug modul to print facts
      debug: 
