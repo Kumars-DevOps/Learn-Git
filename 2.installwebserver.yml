@@ -1,0 +1,8 @@
+- name: Install complete webserver
+  hosts: all
+  tasks: 
+   - name: Install httpd package
+     dnf:
+      name: httpd
+      state: latest
+      Red@dev#007007day

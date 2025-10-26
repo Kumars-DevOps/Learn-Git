@@ -1,9 +1,24 @@
 - name: This is a test play
   hosts: all
   tasks: 
-    - name: create an user account
-      user: 
-        name: john
-        state: present
-        shell: /bin/sh
-        comment:  this is a the first user
+   - name: Create Sales Group
+     group:
+      name: SalesG
+      state: present
+   - name: Create Admin Group
+     group:
+      name: AdminG
+      state: present
+   - name: create an user account
+     user: 
+      name: john
+      state: present
+      shell: /bin/sh
+      comment:  this is a the first user
+      group: AdminG
+      groups: SalesG
+     register: ur1
+   - name: register user creation
+     debug:
+      var: ur1
+      

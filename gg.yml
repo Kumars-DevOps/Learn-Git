@@ -1,0 +1,19 @@
+- name: This is first play book
+  hosts: all
+  tasks:
+   - name: Print Jai Mata Di
+     shell: echo "Jai Mata Di"
+     register: mata
+
+   - name: Use debug module to print mata
+     debug:
+      var: mata
+   - name: create a user
+     user: 
+      name: john
+      state: present
+     register: ucr
+   - name: print user id 
+     debug: 
+      msg:
+       - "the user id is {{ucr.uid}}"

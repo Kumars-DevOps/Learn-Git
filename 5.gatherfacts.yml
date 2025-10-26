@@ -1,0 +1,14 @@
+- name: Gather facts from the managed nodes
+  hosts: all
+  tasks: 
+   - name: use Setup module to gather facts
+     setup:
+     register: facts
+   - name: use debug modul to print facts
+     debug: 
+      #var: facts
+      msg: 
+        - "the sysytem is running with {{ansible_distribution}} {{ansible_distribution_version}}"
+        - "the  server hostname is {{ansible_nodename}}"
+
+     
