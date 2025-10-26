@@ -12,8 +12,7 @@
    - name: use debug modul to print facts
      debug: 
       var: facts
-      #msg: 
+      # msg: 
         #- "the sysytem is running with {{ansible_distribution}} {{ansible_distribution_version}}"
         #- "the  server hostname is {{ansible_nodename}}"
         #- "the server ip is {{facts.ansible_default_ipv4.address}}"
-        
