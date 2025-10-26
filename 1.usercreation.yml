@@ -15,7 +15,7 @@
       state: present
       shell: /bin/sh
       comment:  this is a the first user
-      group: Admin
+      group: AdminG
       groups: Sales
      register: ur1
    - name: register user creation
