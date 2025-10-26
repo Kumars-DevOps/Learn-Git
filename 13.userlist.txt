@@ -1,0 +1,10 @@
+users: #list of users
+  - uname: testuser1
+	ushell: /bin/bash
+	ucomment: Testing Users
+  - uname: testuser2
+	ushell: /bin/bash
+	ucomment:  Testing Users
+  - uname: testuser3
+	ushell: /bin/bash
+	ucomment:  Testing Users
