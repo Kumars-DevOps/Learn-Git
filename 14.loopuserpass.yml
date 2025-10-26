@@ -3,11 +3,11 @@
   vars_files: 13.userlist.txt
   tasks:
    - name: Create user with passwords
-      user:
-       name: "{{item.uname}}"
-       shell: "{{item.ushell}}"
-       comment: "{{item.ucomment}}"
-       password: "{{item.upass | password_hash('sh
+     user:
+      name: "{{item.uname}}"
+      shell: "{{item.ushell}}"
+      comment: "{{item.ucomment}}"
+      password: "{{item.upass | password_hash('sh
        a512')}}"
      loop: "{{users}}" 
        
