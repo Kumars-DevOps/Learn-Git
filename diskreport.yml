@@ -1,0 +1,13 @@
+- name: Get Disk Report From Node2
+  hosts:
+  tasks:
+    - name: Fetch Disk Report from db nodes
+      shell: df -h 
+      register: r1
+    - name: Get Report r1 data print using debug module
+      debug:
+        var:  r1
+        msg:
+          - "the start time is {{r1.start}}"
+          - "The end time is {{r1.end}}"
+     

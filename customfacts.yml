@@ -1,0 +1,12 @@
+- name: My house custom facts
+  hosts:  db
+  gather_facts: true
+  tasks:  
+    - name: Create facts directory to node2
+      file: 
+        path: /etc/ansible/facts.d
+        state:  directory
+    - name: copy facts file to node2
+      copy: 
+        src:  customfacts.txt
+        dest: /etc/ansible/facts.d/

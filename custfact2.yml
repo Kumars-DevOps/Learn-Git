@@ -1,0 +1,8 @@
+- name: My house custom facts
+  hosts:  db
+  gather_facts: true
+  tasks:
+    - name: Use Debug Module to print custom facts
+      debug:  
+        msg:
+        - "my house number is {{ansible_local.housefacts.myhouse.House}}"
