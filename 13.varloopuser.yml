@@ -4,7 +4,7 @@
   tasks: 
     - name: Create Multiple User using loop
       user: 
-          name: "{{item.uname}}"
-          shell: "{{item.ushell}}"
-          comment: "{{item.ucomment}}"
+        name: "{{item.uname}}"
+        shell: "{{item.ushell}}"
+        comment: "{{item.ucomment}}"
       loop: "{{users}}" 
