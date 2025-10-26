@@ -1,10 +1,23 @@
-- name: create user with var prompt
   hosts: all
+  become: yes
   vars_prompt:
-  - name: uname
-    promt:  Enter the user t
-    private: false
-  tasks: 
-  - name: Create user with var prompt
-    user: 
-      - me: "{{uname}}"     fdsf 
+    - name: uname
+      prompt: "Enter username to create"
+      private: no
+
+  tasks:
+    - name: Create user with var prompt
+      user:
+        name: "{{ uname }}"
+        state: present
+        create_home: yes
+        shell: /bin/bash
+      register: ucr
+
+    - name: Display user creation result
+      debug:
+        var: ucr
+
+    - name: Show user ID information
+      debug:
+        msg: "The UID of user '{{ uname }}' is {{ ucr.uid }}"
