@@ -1,10 +1,13 @@
 users: #list of users
- - uname: testuser1
+ - uname: secuser1
    ushell: /bin/bash
    ucomment: Testing Users
- - uname: testuser2
+   upass: redhat123
+ - uname: secuser2
    ushell: /bin/bash
    ucomment:  Testing Users
- - uname: testuser3
+   upass: redhat123
+ - uname: secuser3
    ushell: /bin/bash
    ucomment:  Testing Users
+   upass: redhat123

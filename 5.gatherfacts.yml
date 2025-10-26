@@ -8,7 +8,6 @@
      debug: 
       #var: facts
       msg: 
-        - "the sysytem is running with {{ansible_distribution}} {{ansible_distribution_version}}"
-        - "the  server hostname is {{ansible_nodename}}"
-
-     
+       - "the sysytem is running with {{ansible_distribution}} {{ansible_distribution_version}}"
+       - "the hostname of the server is {{}}"
+       - "the ip address of the server is {{facts.ansible_facts.ansible_default_ipv4.addresses}}"
