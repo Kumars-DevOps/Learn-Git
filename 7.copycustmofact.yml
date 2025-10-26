@@ -1,12 +1,12 @@
 - name: To copy custom fact on managed nodes
   hosts: node1
   tasks:  
-    - name: Creats directory for custom facts
-      file: 
-        - path: /etc/ansible/facts.d
-          state:  directory
-    - name: Copy custom fact to the above directory
-      copy: 
-        src:  tcs.fact
-        dest: /etc/ansible/facts.d/
-        
+   - name: Creats directory for custom facts
+     file: 
+      path: /etc/ansible/facts.d
+      state:  directory
+   - name: Copy custom fact to the above directory
+     copy: 
+      src:  tcs.fact
+      dest: /etc/ansible/facts.d/
+
