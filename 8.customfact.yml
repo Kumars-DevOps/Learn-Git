@@ -3,7 +3,8 @@
   tasks:  
     - name: use debug msg to print TCS facts  
       debug:  
-        msg:
-         - "the server is in {{ansible_local.tcs.myorgfacts.location}}"
-         - "the server is in {{ansible_local.tcs.myorgfacts.location}}"
-     	   - "the belongs to {{ansible_local.tcs.myorgfacts.company}} it is in {{ansible_local.tcs.myorgfacts.color}}"
+       msg:
+        - "the server is in {{ansible_local.tcs.myorgfacts.location}}"
+        - "the server is in {{ansible_local.tcs.myorgfacts.location}}"
+     	  - "the belongs to {{ansible_local.tcs.myorgfacts.company}} it is in {{ansible_local.tcs.myorgfacts.color}}"
+        # test
