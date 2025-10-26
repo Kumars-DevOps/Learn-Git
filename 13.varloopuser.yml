@@ -2,9 +2,9 @@
   hosts: all
   vars_files:  13.userlist.txt
   tasks: 
-    - name: Create Multiple User using loop
-      user: 
-        name: "{{item.uname}}"
-        shell: "{{item.ushell}}"
-        comment: "{{item.ucomment}}"
-      loop: "{{users}}" 
+   - name: Create Multiple User using loop
+     user: 
+      name: "{{item.uname}}"
+      shell: "{{item.ushell}}"
+      comment: "{{item.ucomment}}"
+     loop: "{{users}}" 
