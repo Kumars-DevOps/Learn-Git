@@ -7,7 +7,7 @@
   tasks:
    - name: Create user with var prompt
      user:
-      name: {{uname}}
+      name: "{{uname}}"
       state: present
      register: ucr
    - name: user debug module to print user id
