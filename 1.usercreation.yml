@@ -20,5 +20,5 @@
      register: ur1
    - name: register user creation
      debug:
-      msg: ur1
+      var: ur1
       
