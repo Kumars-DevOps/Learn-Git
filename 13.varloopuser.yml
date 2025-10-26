@@ -1,6 +1,17 @@
 - name: Create Multiple User using loop
   hosts: all
-  vars_files:  13.userlist.txt
+  #vars_files:  13.userlist.txt
+  vars:
+   users:
+    - uname: duser1
+      ushell: /bin/sh
+      ucomment: These are Development users
+    - uname: duser2
+      ushell: /bin/sh
+      ucomment: These are Development users
+    - uname: duser3
+      ushell: /bin/sh
+      ucomment: These are Development users
   tasks: 
    - name: Create Multiple User using loop
      user: 
