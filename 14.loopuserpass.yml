@@ -9,5 +9,5 @@
        comment: "{{item.ucomment}}"
        password: "{{item.upass | password_hash('sh
        a512')}}"
-      loop: "{{users}}" 
+     loop: "{{users}}" 
        
