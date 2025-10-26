@@ -1,0 +1,8 @@
+[myorgfacts]
+company=TCS
+department=IT
+color=red
+role=web
+location=mumbai
+[project]
+name=ticketing

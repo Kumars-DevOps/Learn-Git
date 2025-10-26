@@ -1,0 +1,6 @@
+- name: This play to collect TCS facts
+  hosts:  all
+  tasks:  
+    - name: use debug msg to print TCS facts  
+      debug:  
+        
