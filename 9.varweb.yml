@@ -8,7 +8,7 @@
    - name: copy home page
      copy:
       #src: mypage.txt
-      content: "Sample Webpage For "{{pkg}}" Web-Server"
+      content: "Sample Webpage For Web-Server"
       dest: /var/www/html/index.html
    #- name: open firewall for {{fwservice}} service
       #state: present
