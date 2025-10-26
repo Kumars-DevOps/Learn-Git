@@ -16,7 +16,7 @@
       shell: /bin/sh
       comment:  this is a the first user
       group: AdminG
-      groups: Sales
+      groups: SalesG
      register: ur1
    - name: register user creation
      debug:
