@@ -1,0 +1,10 @@
+- name: create user with var prompt
+  hosts: all
+  vars_prompt:
+  - name: uname
+    promt:  Enter the user t
+    private: false
+  tasks: 
+  - name: Create user with var prompt
+    user: 
+      - me: "{{uname}}"     fdsf 
