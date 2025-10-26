@@ -1,5 +1,5 @@
 - name: To copy custom fact on managed nodes
-  hosts: node1
+  hosts: all
   tasks:  
    - name: Creats directory for custom facts
      file: 
