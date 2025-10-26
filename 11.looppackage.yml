@@ -1,5 +1,5 @@
 - name: Install Packge using loops
-  hosts: all
+  hosts: node2
   tasks:
    - name: Install Multiple package using look
      dnf:
