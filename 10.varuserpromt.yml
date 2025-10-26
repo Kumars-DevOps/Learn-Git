@@ -12,6 +12,6 @@
      register: ucr
    - name: user debug module to print user id
      debug:
-      var: ucr
-      # msg:
-      # - "the uid of {{uname}} is {{ucr.uid}}" 
+      # var: ucr
+      msg:
+       - "the uid of {{uname}} is {{ucr.uid}}" 
