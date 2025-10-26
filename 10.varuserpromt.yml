@@ -2,12 +2,12 @@
   hosts: all
   vars_prompt:
    - name: uname
-     promt: Enter user to create user
+     prompt: Enter user to create user
      private: false
   tasks:
    - name: Create user with var prompt
      user:
-      name: "{{uname}}"
+      name: "{{ uname }}"
       state: present
      register: ucr
    - name: user debug module to print user id
