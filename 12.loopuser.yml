@@ -1,0 +1,21 @@
+- name: Create Multiple User using loop
+  hosts: all
+  tasks: 
+    - name: Create Multiple User using loop
+      user: 
+          name: "{{item.uname}}"
+          shell: "{{item.ushell}}"
+          comment: "{{item.comment}}"
+      loop: 
+        - uname: user1
+          ushell: /bin/sh
+          ucomment: "These are loop users"
+        - uname: user2
+          ushell: /bin/sh
+          ucomment: "These are loop users"
+        - uname: user3
+          ushell: /bin/sh
+          ucomment: "These are loop users"
+        - uname: user4
+          ushell: /bin/sh
+          ucomment: "These are loop users"
