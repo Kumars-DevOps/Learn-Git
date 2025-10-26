@@ -4,7 +4,9 @@
   tasks: 
    - name: use Setup module to gather facts
      setup:
-      gather_subset:  all_ipv4_addresses
+      gather_subset:  
+        - network
+        - hardware
      register: facts
    - name: use debug modul to print facts
      debug: 
