@@ -6,5 +6,6 @@
      register: facts
    - name: use debug modul to print facts
      debug: 
-      var: facts
+      #var: facts
+      msg: "the sysytem is running with {{ansible_distribution}}"
      
