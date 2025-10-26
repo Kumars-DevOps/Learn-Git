@@ -7,5 +7,5 @@
        msg:
         - "the server is in {{ansible_local.tcs.myorgfacts.location}}"
         - "the server is in {{ansible_local.tcs.myorgfacts.location}}"
-     	  - "the belongs to {{ansible_local.tcs.myorgfacts.company}} it is in {{ansible_local.tcs.myorgfacts.color}}"
+        - "the belongs to {{ansible_local.tcs.myorgfacts.company}} it is in {{ansible_local.tcs.myorgfacts.color}}"
         
