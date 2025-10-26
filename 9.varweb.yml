@@ -1,30 +1,29 @@
 - name: This playbook is to install httpd Web-Server
   hosts: all
   tasks:
-   - name: Install {{pkg}} package
+   - name: Install "{{pkg}}" package
      dnf:
-      name: {{pkg}}
+      name: "{{pkg}}"
       state: latest
    - name: copy home page
      copy:
       #src: mypage.txt
-      content: "Sample Webpage For {{pkg}} Web-Server"
+      content: "Sample Webpage For "{{pkg}}" Web-Server"
       dest: /var/www/html/index.html
    #- name: open firewall for {{fwservice}} service
-    
       #state: present
       #service: http
       #port: 80/tcp
       #permanent: 1
       #immediate: 1
-   - name: create {{user}}n user
+   - name: create "{{user}}" user
      user:
-      name: {{user}}
+      name: "{{user}}"
       state: present
       comment: "This is web administrator account"
       shell: /bin/sh
-   - name: Start {{service}} service
+   - name: Start "{{service}}" service
      service:
-      name: {{service}}
+      name: "{{service}}"
       state: started
       enabled: true
