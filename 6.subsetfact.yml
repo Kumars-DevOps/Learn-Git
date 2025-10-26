@@ -5,8 +5,8 @@
    - name: use Setup module to gather facts
      setup:
       gather_subset:  
-        - network
-        - hardware
+      #  - network
+      # - hardware
         - distribution
      register: facts
    - name: use debug modul to print facts
