@@ -1,0 +1,71 @@
+- name: Install httpd on DB server
+  hosts:  db
+  tasks:
+    - name: Install httpd package
+      dnf:
+        name: httpd
+        state: present
+    - name: Create webpage
+      copy:
+        src:  index.html
+        dest: /var/www/html/index.html
+    - name: Open firewall with service and ports
+      ansible.posix.firewalld:
+        service: http
+        #port: 80/tcp
+        permanent: 1
+        state: enabled
+        immediate:  1
+    - name: Start Httpd service
+      service:
+        name: httpd
+        state: started
+        enabled: true
+[rakesh@node1 Learn-Git]$ ansible-playbook Installweb.yml 
+
+PLAY [Install httpd on DB server] *****************************************************************************************
+
+TASK [Gathering Facts] ****************************************************************************************************
+ok: [node2]
+
+TASK [Install httpd package] **********************************************************************************************
+ok: [node2]
+
+TASK [Create webpage] *****************************************************************************************************
+ok: [node2]
+
+TASK [Open firewall with service and ports] *******************************************************************************
+ok: [node2]
+
+TASK [Start Httpd service] ************************************************************************************************
+ok: [node2]
+
+PLAY RECAP ****************************************************************************************************************
+node2                      : ok=5    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+
+[rakesh@node1 Learn-Git]$ cp -piv Installweb.yml varweb.yml
+'Installweb.yml' -> 'varweb.yml'
+[rakesh@node1 Learn-Git]$ cat Installweb.yml 
+- name: Install httpd on DB server
+  hosts:  db
+  tasks:
+    - name: Install httpd "{{pkg}}"
+      dnf:
+        name: "{{pkg}}""
+        state: present
+    - name: Create webpage
+      copy:
+        src:  index.html
+        dest: /var/www/html/index.html
+    - name: Open firewall with "{{fwservice}}" and ports
+      ansible.posix.firewalld:
+        service: "{{fwservice}}"
+        #port: 80/tcp
+        permanent: 1
+        state: enabled
+        immediate:  1
+    - name: Start "{{appservice}}" service
+      service:
+        name: "{{appservice}}"
+        state: started
+        enabled: true

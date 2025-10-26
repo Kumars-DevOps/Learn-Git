@@ -1,0 +1,22 @@
+- name: Install httpd on DB server
+  hosts:  db
+  tasks:  
+    - name: Install httpd package
+      dnf:  
+        name: httpd
+        state: present
+    - name: Create webpage
+      copy: 
+        src:  index.html
+        path: /var/www/html/index.html
+    - name: Open firewall with service and ports
+      ansile.posix.firewalld:  
+        service: http
+        port: 80/tcp
+        permanent: 1
+        enabled:  true 
+    - name: Start Httpd service
+      service:  
+        name: httpd
+        state: started
+        enable: true     
