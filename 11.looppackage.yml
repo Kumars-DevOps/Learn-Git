@@ -1,0 +1,17 @@
+- name: Install Packge using loops
+  hosts: all
+  tasks:
+   - name: Install Multiple package using look
+     dnf:
+      - name: "{{ item }}"
+        state: latest
+     loop:
+      - lsof
+      - telnet
+      - dialog
+      - httpd
+      
+
+
+
+        
