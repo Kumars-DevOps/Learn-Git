@@ -7,4 +7,4 @@
           name: "{{item.uname}}"
           shell: "{{item.ushell}}"
           comment: "{{item.ucomment}}"
-      loop: "{{users}}"
+      loop: "{{users}}" 
