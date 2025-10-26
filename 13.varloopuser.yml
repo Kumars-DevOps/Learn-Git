@@ -1,6 +1,6 @@
 - name: Create Multiple User using loop
   hosts: all
-  vars_failes:  13.userlist.txt
+  vars_files:  13.userlist.txt
   tasks: 
     - name: Create Multiple User using loop
       user: 
