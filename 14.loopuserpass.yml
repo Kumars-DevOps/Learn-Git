@@ -1,0 +1,12 @@
+- name: Create Multiple User using loop
+  hosts: all
+  vars_files: 13.userlist.txt
+  tasks:
+   - name: Create user with passwords
+     user:
+      name: "{{item.uname}}"
+      shell: "{{item.ushell}}"
+      comment: "{{item.ucomment}}"
+      password: "{{item.upass | password_hash('sha512')}}"
+     loop: "{{users}}" 
+       
