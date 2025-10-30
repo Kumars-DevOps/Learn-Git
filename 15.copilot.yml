@@ -1,5 +1,5 @@
 - name: Install httpd package and enable the server
-  hosts: hosts
+  hosts: all
   become: yes
   tasks:
     - name: Install httpd package
