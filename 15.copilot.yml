@@ -1,0 +1,28 @@
+- name: Install httpd package and enable the server
+  hosts: webservers
+  become: yes
+  tasks:
+    - name: Install httpd package
+      yum:
+        name: httpd
+        state: present
+
+    - name: Start and enable httpd service
+      service:
+        name: httpd
+        state: started
+        enabled: yes
+    - name: Open HTTP port in firewall
+      firewalld:
+        port: 80/tcp
+        permanent: yes
+        state: enabled
+        immediate: yes
+     - name: Create a simple HTML file
+      copy:
+        dest: /var/www/html/index.html
+        content: "<html><body><h1>Welcome to the Web Server</h1></body></html>"
+        owner: apache
+        group: apache
+        mode: '0644'
+        
