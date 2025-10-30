@@ -18,11 +18,11 @@
         permanent: yes
         state: enabled
         immediate: yes
-     - name: Create a simple HTML file
+    - name: Create a simple HTML file
       copy:
         dest: /var/www/html/index.html
         content: "<html><body><h1>Welcome to the Web Server</h1></body></html>"
         owner: apache
         group: apache
         mode: '0644'
-        
+
