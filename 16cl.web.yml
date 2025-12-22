@@ -25,7 +25,7 @@
         state: enabled
         immediate: yes
         notify: reload-firewalld
-    handlers:
+      handlers:
     - name: reload-firewalld
       service:
         name: firewalld
