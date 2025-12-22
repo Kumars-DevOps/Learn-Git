@@ -7,7 +7,7 @@
         name: httpd
         state: present
     - name: start and enable httpd service
-       service:
+      service:
         name: httpd
         state: started
         enabled: yes
@@ -30,4 +30,3 @@
       service:
         name: firewalld
         state: reloaded
-        
