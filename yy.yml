@@ -1,0 +1,14 @@
+- name: install apache web-server
+  hosts: all
+  become: yes
+  tasks: 
+  - name: install apache
+    dnf:
+      name: httpd
+      state: present
+  - name: start and enable apache web-service
+    syatemd:
+      name: httpd
+      state: started
+      enabled: yes
+      
