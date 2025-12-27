@@ -1,0 +1,36 @@
+​1. Setup & Configuration
+​Before you start, Git needs to know who you are.
+​git config --global user.name "Your Name": Set your name.
+​git config --global user.email "email@example.com": Set your email.
+​git init: Turn the current folder into a new Git repository.
+​git clone [url]: Download an existing repository to your machine.
+​2. The Daily Workflow (Save & Sync)
+​This is the "Stage → Commit → Push" cycle you will use most.
+​git status: See which files are modified, deleted, or new.
+​git add [file]: Add a specific file to the staging area.
+​git add .: Add all changed files to the staging area.
+​git commit -m "Message": Save your staged changes to the local history.
+​git push origin [branch]: Upload your local commits to GitHub.
+​git pull: Download and merge the latest changes from GitHub to your machine.
+​3. Branching & Merging
+​Used for working on features without breaking the main code.
+​git branch: List all local branches.
+​git branch [name]: Create a new branch.
+​git checkout [name] or git switch [name]: Move to a specific branch.
+​git checkout -b [name]: Create a new branch and switch to it immediately.
+​git merge [branch-name]: Combine the work from another branch into your current one.
+​git branch -d [name]: Delete a branch that you’ve finished with.
+​4. Inspecting History
+​git log: Show a list of all commits made in the project.
+​git log --oneline: A cleaner, one-line-per-commit view.
+​git diff: See exactly what lines of code changed but aren't staged yet.
+​git show [commit-id]: See the details of a specific commit.
+​5. Fixing Mistakes (Undo)
+​git checkout -- [file]: Discard changes in a file and revert it to the last commit.
+​git reset HEAD~1: Undo the last commit but keep the code changes in your files.
+​git reset --hard HEAD~1: Warning: Completely delete the last commit and all its changes.
+​git stash: Temporarily "hide" your uncommitted changes so you can switch branches.
+​git stash pop: Bring those hidden changes back.
+​Pro Tip for DevOps
+​If you find yourself using root@localhost, remember that Git is usually configured per-user. Ensure your ~/.gitconfig is correct for the root user if that's where you are doing your work.
+​Would you like a printable PDF "Cheat Sheet" of these commands, or should I explain how to resolve a "Merge Conflict"?
