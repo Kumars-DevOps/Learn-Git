@@ -1,5 +1,5 @@
 - name: This playbook is to install httpd Web-Server
-  hosts: client1
+  hosts: all
   tasks:
    - name: Install httpd package
      dnf:
