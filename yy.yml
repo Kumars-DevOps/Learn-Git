@@ -1,6 +1,8 @@
 - name: install apache web-server
   hosts: all
-  become: yes
+  become:
+  
+ yes
   tasks: 
   - name: install apache
     dnf:
