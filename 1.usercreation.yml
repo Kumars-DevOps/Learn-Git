@@ -21,4 +21,12 @@
    - name: register user creation
      debug:
       var: ur1
+   - name: create another user account
+     user: 
+      name: ramesh
+      state: preset
+      
+            
+
+       
       

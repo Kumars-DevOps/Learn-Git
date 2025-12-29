@@ -25,3 +25,6 @@ resource "aws_s3_bucket" "anilbucket" {
         Environment = "prod"
     }
 }
+
+
+    
