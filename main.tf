@@ -21,7 +21,7 @@
 resource "aws_s3_bucket" "anilbucket" {
     bucket = "anilbucket233333m"
     tags = {
-        Name = "anilbucket"
+        Name = "anilbucketxyz000"
         Environment = "prod"
     }
 }
