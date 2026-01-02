@@ -27,4 +27,9 @@ resource "aws_s3_bucket" "anilbucket" {
 }
 
 
+resource "local_file" "myfirstfile" {
+    fil
+}
+
+
     

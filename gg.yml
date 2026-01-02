@@ -12,7 +12,7 @@
      user: 
       name: john
       state: present
-     register: ucr
+     register: ucrs
    - name: print user id 
      debug: 
       msg:
