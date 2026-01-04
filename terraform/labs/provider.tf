@@ -8,10 +8,10 @@ terraform {
       source  = "hashicorp/aws"
       version = "~> 5.0" # Allows minor updates (5.1, 5.2) but not major (6.0)
     }
-    
+
     random = {
       source  = "hashicorp/random"
-      version = "3.5.1"  # Pins to an exact version
+      version = "3.5.1" # Pins to an exact version
     }
   }
 }
