@@ -96,5 +96,8 @@ output "security_group" {
   value = aws_instance.anilvm.security_groups
 }
 
+output
+
+
 
 
