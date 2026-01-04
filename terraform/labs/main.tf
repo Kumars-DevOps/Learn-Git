@@ -92,6 +92,10 @@ resource "aws_instance" "anilvm" {
   }
 }
 
+output "instance_ip" {
+  value = aws_instance.anilvm.public_ip
+}
+
 
 
 
