@@ -89,14 +89,12 @@ resource "aws_instance" "anilvm" {
   tags  = {
     Name  = "webserver"
     Environment   =   "Production"
-  }
+"  }
 }
 
-output "instance_ip" {
-  value = aws_instance.anilvm.public_ip
+output "security_group" {
+  value = aws_instance.anilvm.security_groups
 }
-
-
 
 
 
